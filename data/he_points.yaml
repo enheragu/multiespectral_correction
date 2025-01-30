@@ -6,6 +6,54 @@
   - - 131
     - 155
   rgb_file: /set00/V000/visible/I00432.jpg
+/set00/V000/lwir/I00964.jpg:
+  lwir:
+  - - 170
+    - 358
+  - - 150
+    - 361
+  rgb:
+  - - 159
+    - 370
+  - - 142
+    - 374
+  rgb_file: /set00/V000/visible/I00964.jpg
+/set00/V000/lwir/I01155.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set00/V000/visible/I01155.jpg
+/set00/V000/lwir/I01205.jpg:
+  lwir:
+  - - 102
+    - 286
+  rgb:
+  - - 87
+    - 293
+  rgb_file: /set00/V000/visible/I01205.jpg
+/set00/V001/lwir/I00030.jpg:
+  lwir:
+  - - 483
+    - 267
+  - - 524
+    - 276
+  - - 608
+    - 389
+  - - 616
+    - 375
+  - - 620
+    - 368
+  rgb:
+  - - 479
+    - 264
+  - - 521
+    - 273
+  - - 614
+    - 389
+  - - 624
+    - 374
+  - - 625
+    - 370
+  rgb_file: /set00/V001/visible/I00030.jpg
 /set00/V001/lwir/I00100.jpg:
   lwir:
   - - 536
@@ -18,6 +66,22 @@
   lwir: []
   rgb: []
   rgb_file: /set00/V001/visible/I00261.jpg
+/set00/V001/lwir/I00273.jpg:
+  lwir:
+  - - 58
+    - 172
+  - - 140
+    - 131
+  - - 140
+    - 150
+  rgb:
+  - - 32
+    - 170
+  - - 126
+    - 125
+  - - 128
+    - 152
+  rgb_file: /set00/V001/visible/I00273.jpg
 /set00/V001/lwir/I00296.jpg:
   lwir:
   - - 78
@@ -50,10 +114,34 @@
   - - 627
     - 244
   rgb_file: /set00/V001/visible/I00296.jpg
+/set00/V001/lwir/I01213.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set00/V001/visible/I01213.jpg
+/set00/V001/lwir/I01307.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set00/V001/visible/I01307.jpg
+/set00/V001/lwir/I01504.jpg:
+  lwir:
+  - - 28
+    - 276
+  - - 280
+    - 79
+  rgb:
+  - - 10
+    - 284
+  - - 284
+    - 78
+  rgb_file: /set00/V001/visible/I01504.jpg
 /set00/V001/lwir/I01753.jpg:
   lwir: []
   rgb: []
   rgb_file: /set00/V001/visible/I01753.jpg
+/set00/V001/lwir/I01836.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set00/V001/visible/I01836.jpg
 /set00/V001/lwir/I02530.jpg:
   lwir:
   - - 109
@@ -94,10 +182,62 @@
   - - 335
     - 227
   rgb_file: /set00/V002/visible/I00423.jpg
+/set00/V002/lwir/I00510.jpg:
+  lwir:
+  - - 548
+    - 349
+  - - 510
+    - 330
+  - - 480
+    - 316
+  - - 462
+    - 306
+  - - 445
+    - 286
+  - - 430
+    - 286
+  - - 600
+    - 392
+  - - 514
+    - 451
+  - - 528
+    - 449
+  rgb:
+  - - 554
+    - 352
+  - - 512
+    - 330
+  - - 482
+    - 314
+  - - 462
+    - 304
+  - - 444
+    - 286
+  - - 428
+    - 285
+  - - 615
+    - 400
+  - - 526
+    - 464
+  - - 544
+    - 463
+  rgb_file: /set00/V002/visible/I00510.jpg
+/set00/V002/lwir/I00667.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set00/V002/visible/I00667.jpg
 /set00/V002/lwir/I00738.jpg:
   lwir: []
   rgb: []
   rgb_file: /set00/V002/visible/I00738.jpg
+/set00/V002/lwir/I00917.jpg:
+  lwir:
+  - - 164
+    - 270
+  rgb:
+  - - 158
+    - 274
+  rgb_file: /set00/V002/visible/I00917.jpg
 /set00/V002/lwir/I00969.jpg:
   lwir:
   - - 279
@@ -126,6 +266,94 @@
   - - 455
     - 362
   rgb_file: /set00/V002/visible/I00969.jpg
+/set00/V002/lwir/I01005.jpg:
+  lwir:
+  - - 311
+    - 451
+  - - 330
+    - 450
+  - - 323
+    - 382
+  - - 342
+    - 380
+  - - 310
+    - 349
+  - - 285
+    - 380
+  - - 306
+    - 381
+  - - 308
+    - 406
+  - - 284
+    - 404
+  - - 286
+    - 385
+  - - 236
+    - 408
+  - - 280
+    - 434
+  - - 283
+    - 418
+  - - 308
+    - 420
+  - - 200
+    - 328
+  - - 206
+    - 322
+  - - 44
+    - 301
+  - - 47
+    - 283
+  - - 202
+    - 305
+  - - 225
+    - 306
+  - - 430
+    - 290
+  rgb:
+  - - 312
+    - 472
+  - - 333
+    - 470
+  - - 320
+    - 388
+  - - 340
+    - 387
+  - - 309
+    - 353
+  - - 284
+    - 388
+  - - 306
+    - 389
+  - - 308
+    - 420
+  - - 284
+    - 418
+  - - 285
+    - 394
+  - - 231
+    - 424
+  - - 280
+    - 457
+  - - 282
+    - 432
+  - - 310
+    - 435
+  - - 196
+    - 332
+  - - 201
+    - 326
+  - - 18
+    - 312
+  - - 24
+    - 294
+  - - 200
+    - 308
+  - - 222
+    - 309
+  - - 425
+    - 287
+  rgb_file: /set00/V002/visible/I01005.jpg
 /set00/V002/lwir/I01146.jpg:
   lwir:
   - - 45
@@ -290,6 +518,18 @@
   lwir: []
   rgb: []
   rgb_file: /set00/V002/visible/I02381.jpg
+/set00/V003/lwir/I00040.jpg:
+  lwir:
+  - - 478
+    - 344
+  - - 181
+    - 60
+  rgb:
+  - - 481
+    - 344
+  - - 182
+    - 55
+  rgb_file: /set00/V003/visible/I00040.jpg
 /set00/V003/lwir/I00184.jpg:
   lwir:
   - - 520
@@ -478,6 +718,10 @@
   - - 594
     - 211
   rgb_file: /set00/V003/visible/I01563.jpg
+/set00/V003/lwir/I01607.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set00/V003/visible/I01607.jpg
 /set00/V003/lwir/I01626.jpg:
   lwir:
   - - 167
@@ -770,6 +1014,18 @@
   - - 121
     - 218
   rgb_file: /set00/V006/visible/I00572.jpg
+/set00/V006/lwir/I00761.jpg:
+  lwir:
+  - - 74
+    - 138
+  - - 214
+    - 146
+  rgb:
+  - - 65
+    - 137
+  - - 212
+    - 146
+  rgb_file: /set00/V006/visible/I00761.jpg
 /set00/V006/lwir/I00863.jpg:
   lwir: []
   rgb: []
@@ -978,6 +1234,58 @@
   - - 595
     - 85
   rgb_file: /set00/V007/visible/I00581.jpg
+/set00/V007/lwir/I00991.jpg:
+  lwir:
+  - - 204
+    - 291
+  - - 474
+    - 320
+  - - 484
+    - 324
+  - - 503
+    - 304
+  - - 516
+    - 301
+  - - 98
+    - 80
+  - - 322
+    - 95
+  - - 270
+    - 92
+  - - 362
+    - 112
+  - - 422
+    - 134
+  - - 406
+    - 138
+  - - 406
+    - 150
+  rgb:
+  - - 201
+    - 294
+  - - 477
+    - 318
+  - - 486
+    - 319
+  - - 504
+    - 301
+  - - 522
+    - 300
+  - - 94
+    - 76
+  - - 325
+    - 96
+  - - 271
+    - 92
+  - - 362
+    - 113
+  - - 420
+    - 134
+  - - 406
+    - 138
+  - - 406
+    - 150
+  rgb_file: /set00/V007/visible/I00991.jpg
 /set00/V007/lwir/I01372.jpg:
   lwir: []
   rgb: []
@@ -986,6 +1294,42 @@
   lwir: []
   rgb: []
   rgb_file: /set00/V007/visible/I01588.jpg
+/set00/V008/lwir/I00108.jpg:
+  lwir:
+  - - 47
+    - 404
+  rgb:
+  - - 16
+    - 432
+  rgb_file: /set00/V008/visible/I00108.jpg
+/set00/V008/lwir/I00362.jpg:
+  lwir:
+  - - 294
+    - 280
+  - - 210
+    - 234
+  - - 112
+    - 64
+  - - 64
+    - 72
+  - - 406
+    - 264
+  - - 412
+    - 262
+  rgb:
+  - - 292
+    - 275
+  - - 204
+    - 237
+  - - 105
+    - 58
+  - - 50
+    - 64
+  - - 402
+    - 262
+  - - 407
+    - 260
+  rgb_file: /set00/V008/visible/I00362.jpg
 /set00/V008/lwir/I00917.jpg:
   lwir:
   - - 112
@@ -1062,10 +1406,26 @@
   - - 364
     - 109
   rgb_file: /set00/V008/visible/I01858.jpg
+/set01/V000/lwir/I00272.jpg:
+  lwir:
+  - - 578
+    - 334
+  rgb:
+  - - 599
+    - 342
+  rgb_file: /set01/V000/visible/I00272.jpg
+/set01/V000/lwir/I00401.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set01/V000/visible/I00401.jpg
 /set01/V000/lwir/I00417.jpg:
   lwir: []
   rgb: []
   rgb_file: /set01/V000/visible/I00417.jpg
+/set01/V000/lwir/I00598.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set01/V000/visible/I00598.jpg
 /set01/V000/lwir/I00806.jpg:
   lwir:
   - - 310
@@ -1230,6 +1590,78 @@
   - - 130
     - 118
   rgb_file: /set01/V000/visible/I01759.jpg
+/set01/V000/lwir/I01873.jpg:
+  lwir:
+  - - 145
+    - 304
+  - - 193
+    - 340
+  - - 62
+    - 390
+  - - 60
+    - 253
+  - - 55
+    - 284
+  - - 204
+    - 275
+  - - 610
+    - 490
+  - - 560
+    - 469
+  - - 538
+    - 445
+  - - 491
+    - 132
+  - - 132
+    - 122
+  - - 538
+    - 14
+  - - 595
+    - 21
+  - - 608
+    - 22
+  - - 618
+    - 23
+  - - 557
+    - 114
+  - - 607
+    - 336
+  rgb:
+  - - 132
+    - 308
+  - - 185
+    - 344
+  - - 44
+    - 413
+  - - 42
+    - 258
+  - - 36
+    - 298
+  - - 195
+    - 276
+  - - 632
+    - 507
+  - - 572
+    - 476
+  - - 544
+    - 448
+  - - 490
+    - 133
+  - - 127
+    - 116
+  - - 540
+    - 12
+  - - 607
+    - 18
+  - - 620
+    - 18
+  - - 629
+    - 19
+  - - 554
+    - 118
+  - - 608
+    - 335
+  rgb_file: /set01/V000/visible/I01873.jpg
 /set01/V001/lwir/I00630.jpg:
   lwir:
   - - 587
@@ -1250,6 +1682,10 @@
   - - 318
     - 119
   rgb_file: /set01/V001/visible/I00630.jpg
+/set01/V001/lwir/I00813.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set01/V001/visible/I00813.jpg
 /set01/V001/lwir/I01007.jpg:
   lwir: []
   rgb: []
@@ -1314,6 +1750,30 @@
   lwir: []
   rgb: []
   rgb_file: /set01/V002/visible/I00671.jpg
+/set01/V002/lwir/I00700.jpg:
+  lwir:
+  - - 82
+    - 106
+  - - 83
+    - 144
+  - - 414
+    - 113
+  - - 219
+    - 171
+  - - 242
+    - 170
+  rgb:
+  - - 73
+    - 105
+  - - 74
+    - 143
+  - - 412
+    - 110
+  - - 217
+    - 170
+  - - 242
+    - 170
+  rgb_file: /set01/V002/visible/I00700.jpg
 /set01/V002/lwir/I00801.jpg:
   lwir:
   - - 384
@@ -1350,6 +1810,14 @@
   - - 502
     - 85
   rgb_file: /set01/V002/visible/I00801.jpg
+/set01/V002/lwir/I00836.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set01/V002/visible/I00836.jpg
+/set01/V002/lwir/I01113.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set01/V002/visible/I01113.jpg
 /set01/V003/lwir/I00302.jpg:
   lwir:
   - - 490
@@ -1538,6 +2006,86 @@
   - - 496
     - 91
   rgb_file: /set01/V004/visible/I01087.jpg
+/set01/V004/lwir/I01160.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set01/V004/visible/I01160.jpg
+/set01/V004/lwir/I01313.jpg:
+  lwir:
+  - - 88
+    - 314
+  - - 356
+    - 323
+  - - 383
+    - 344
+  - - 434
+    - 336
+  - - 364
+    - 284
+  - - 92
+    - 272
+  - - 106
+    - 307
+  - - 625
+    - 283
+  - - 626
+    - 188
+  rgb:
+  - - 67
+    - 324
+  - - 346
+    - 324
+  - - 378
+    - 344
+  - - 419
+    - 328
+  - - 354
+    - 282
+  - - 72
+    - 276
+  - - 89
+    - 316
+  - - 626
+    - 186
+  - - 626
+    - 283
+  rgb_file: /set01/V004/visible/I01313.jpg
+/set01/V004/lwir/I01524.jpg:
+  lwir:
+  - - 120
+    - 397
+  - - 56
+    - 394
+  - - 50
+    - 346
+  - - 21
+    - 343
+  - - 198
+    - 399
+  - - 244
+    - 400
+  - - 294
+    - 400
+  - - 341
+    - 400
+  rgb:
+  - - 106
+    - 413
+  - - 40
+    - 418
+  - - 40
+    - 360
+  - - 10
+    - 358
+  - - 194
+    - 408
+  - - 244
+    - 406
+  - - 294
+    - 404
+  - - 342
+    - 402
+  rgb_file: /set01/V004/visible/I01524.jpg
 /set01/V005/lwir/I00189.jpg:
   lwir:
   - - 510
@@ -1582,6 +2130,38 @@
   - - 503
     - 80
   rgb_file: /set01/V005/visible/I00189.jpg
+/set02/V000/lwir/I00209.jpg:
+  lwir:
+  - - 314
+    - 384
+  - - 426
+    - 346
+  - - 452
+    - 73
+  rgb:
+  - - 302
+    - 387
+  - - 413
+    - 346
+  - - 438
+    - 74
+  rgb_file: /set02/V000/visible/I00209.jpg
+/set02/V000/lwir/I00272.jpg:
+  lwir:
+  - - 125
+    - 379
+  - - 620
+    - 402
+  - - 474
+    - 280
+  rgb:
+  - - 107
+    - 401
+  - - 639
+    - 415
+  - - 470
+    - 282
+  rgb_file: /set02/V000/visible/I00272.jpg
 /set02/V000/lwir/I00726.jpg:
   lwir:
   - - 598
@@ -1806,6 +2386,10 @@
   - - 298
     - 70
   rgb_file: /set02/V001/visible/I00659.jpg
+/set02/V001/lwir/I01470.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set02/V001/visible/I01470.jpg
 /set02/V001/lwir/I01475.jpg:
   lwir: []
   rgb: []
@@ -1834,10 +2418,18 @@
   - - 278
     - 69
   rgb_file: /set02/V001/visible/I01655.jpg
+/set02/V002/lwir/I00449.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set02/V002/visible/I00449.jpg
 /set02/V002/lwir/I00841.jpg:
   lwir: []
   rgb: []
   rgb_file: /set02/V002/visible/I00841.jpg
+/set02/V003/lwir/I00053.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set02/V003/visible/I00053.jpg
 /set02/V003/lwir/I00249.jpg:
   lwir: []
   rgb: []
@@ -1858,6 +2450,70 @@
   lwir: []
   rgb: []
   rgb_file: /set02/V003/visible/I00802.jpg
+/set02/V004/lwir/I00448.jpg:
+  lwir:
+  - - 582
+    - 367
+  - - 599
+    - 294
+  - - 590
+    - 275
+  - - 580
+    - 255
+  - - 266
+    - 112
+  - - 295
+    - 112
+  - - 295
+    - 124
+  rgb:
+  - - 592
+    - 370
+  - - 610
+    - 292
+  - - 600
+    - 276
+  - - 589
+    - 254
+  - - 267
+    - 109
+  - - 296
+    - 110
+  - - 297
+    - 122
+  rgb_file: /set02/V004/visible/I00448.jpg
+/set02/V004/lwir/I00488.jpg:
+  lwir:
+  - - 591
+    - 309
+  - - 604
+    - 310
+  - - 605
+    - 276
+  - - 590
+    - 274
+  - - 592
+    - 244
+  - - 626
+    - 242
+  - - 521
+    - 286
+  rgb:
+  - - 594
+    - 308
+  - - 612
+    - 308
+  - - 615
+    - 275
+  - - 598
+    - 272
+  - - 599
+    - 244
+  - - 638
+    - 242
+  - - 522
+    - 284
+  rgb_file: /set02/V004/visible/I00488.jpg
 /set02/V004/lwir/I01036.jpg:
   lwir:
   - - 563
@@ -1974,6 +2630,22 @@
   - - 342
     - 225
   rgb_file: /set03/V000/visible/I00189.jpg
+/set03/V000/lwir/I00206.jpg:
+  lwir:
+  - - 257
+    - 284
+  - - 328
+    - 277
+  - - 209
+    - 332
+  rgb:
+  - - 259
+    - 286
+  - - 329
+    - 272
+  - - 211
+    - 334
+  rgb_file: /set03/V000/visible/I00206.jpg
 /set03/V000/lwir/I00255.jpg:
   lwir:
   - - 164
@@ -2070,6 +2742,10 @@
   lwir: []
   rgb: []
   rgb_file: /set03/V000/visible/I01731.jpg
+/set03/V000/lwir/I01817.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set03/V000/visible/I01817.jpg
 /set03/V000/lwir/I01856.jpg:
   lwir: []
   rgb: []
@@ -2078,6 +2754,10 @@
   lwir: []
   rgb: []
   rgb_file: /set03/V000/visible/I01877.jpg
+/set03/V000/lwir/I01978.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set03/V000/visible/I01978.jpg
 /set03/V000/lwir/I02090.jpg:
   lwir: []
   rgb: []
@@ -2122,6 +2802,10 @@
   lwir: []
   rgb: []
   rgb_file: /set03/V000/visible/I02551.jpg
+/set03/V000/lwir/I02637.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set03/V000/visible/I02637.jpg
 /set03/V000/lwir/I02861.jpg:
   lwir: []
   rgb: []
@@ -2138,6 +2822,10 @@
   lwir: []
   rgb: []
   rgb_file: /set03/V000/visible/I03114.jpg
+/set03/V000/lwir/I03300.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set03/V000/visible/I03300.jpg
 /set03/V000/lwir/I03304.jpg:
   lwir: []
   rgb: []
@@ -2286,6 +2974,18 @@
   - - 483
     - 308
   rgb_file: /set03/V001/visible/I00295.jpg
+/set03/V001/lwir/I00354.jpg:
+  lwir:
+  - - 578
+    - 335
+  - - 597
+    - 341
+  rgb:
+  - - 582
+    - 334
+  - - 600
+    - 340
+  rgb_file: /set03/V001/visible/I00354.jpg
 /set03/V001/lwir/I00423.jpg:
   lwir: []
   rgb: []
@@ -2390,6 +3090,14 @@
   lwir: []
   rgb: []
   rgb_file: /set03/V001/visible/I02199.jpg
+/set04/V000/lwir/I00000.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V000/visible/I00000.jpg
+/set04/V000/lwir/I00067.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V000/visible/I00067.jpg
 /set04/V000/lwir/I00150.jpg:
   lwir:
   - - 98
@@ -2414,6 +3122,10 @@
   - - 369
     - 277
   rgb_file: /set04/V000/visible/I00150.jpg
+/set04/V000/lwir/I00162.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V000/visible/I00162.jpg
 /set04/V000/lwir/I00197.jpg:
   lwir: []
   rgb: []
@@ -2426,10 +3138,18 @@
   lwir: []
   rgb: []
   rgb_file: /set04/V000/visible/I00431.jpg
+/set04/V000/lwir/I00458.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V000/visible/I00458.jpg
 /set04/V000/lwir/I00501.jpg:
   lwir: []
   rgb: []
   rgb_file: /set04/V000/visible/I00501.jpg
+/set04/V000/lwir/I00634.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V000/visible/I00634.jpg
 /set04/V000/lwir/I00764.jpg:
   lwir: []
   rgb: []
@@ -2606,6 +3326,14 @@
   lwir: []
   rgb: []
   rgb_file: /set04/V000/visible/I02512.jpg
+/set04/V000/lwir/I02585.jpg:
+  lwir:
+  - - 468
+    - 36
+  rgb:
+  - - 478
+    - 38
+  rgb_file: /set04/V000/visible/I02585.jpg
 /set04/V000/lwir/I02600.jpg:
   lwir: []
   rgb: []
@@ -2614,6 +3342,10 @@
   lwir: []
   rgb: []
   rgb_file: /set04/V000/visible/I02622.jpg
+/set04/V000/lwir/I02689.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V000/visible/I02689.jpg
 /set04/V000/lwir/I02896.jpg:
   lwir: []
   rgb: []
@@ -2678,6 +3410,10 @@
   lwir: []
   rgb: []
   rgb_file: /set04/V000/visible/I03525.jpg
+/set04/V000/lwir/I03585.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V000/visible/I03585.jpg
 /set04/V000/lwir/I03590.jpg:
   lwir: []
   rgb: []
@@ -2686,6 +3422,10 @@
   lwir: []
   rgb: []
   rgb_file: /set04/V000/visible/I03671.jpg
+/set04/V000/lwir/I03714.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V000/visible/I03714.jpg
 /set04/V000/lwir/I03806.jpg:
   lwir: []
   rgb: []
@@ -2694,6 +3434,10 @@
   lwir: []
   rgb: []
   rgb_file: /set04/V001/visible/I00008.jpg
+/set04/V001/lwir/I00068.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V001/visible/I00068.jpg
 /set04/V001/lwir/I00099.jpg:
   lwir: []
   rgb: []
@@ -3050,6 +3794,10 @@
   lwir: []
   rgb: []
   rgb_file: /set04/V001/visible/I01785.jpg
+/set04/V001/lwir/I01819.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V001/visible/I01819.jpg
 /set04/V001/lwir/I01826.jpg:
   lwir: []
   rgb: []
@@ -3210,6 +3958,14 @@
   - - 304
     - 343
   rgb_file: /set04/V001/visible/I02737.jpg
+/set04/V001/lwir/I02751.jpg:
+  lwir:
+  - - 134
+    - 384
+  rgb:
+  - - 118
+    - 398
+  rgb_file: /set04/V001/visible/I02751.jpg
 /set04/V001/lwir/I02766.jpg:
   lwir: []
   rgb: []
@@ -3226,6 +3982,10 @@
   lwir: []
   rgb: []
   rgb_file: /set04/V001/visible/I02855.jpg
+/set04/V001/lwir/I02861.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set04/V001/visible/I02861.jpg
 /set04/V001/lwir/I02862.jpg:
   lwir: []
   rgb: []
@@ -3290,6 +4050,10 @@
   - - 243
     - 343
   rgb_file: /set05/V000/visible/I00618.jpg
+/set05/V000/lwir/I01290.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set05/V000/visible/I01290.jpg
 /set05/V000/lwir/I01549.jpg:
   lwir:
   - - 451
@@ -3338,6 +4102,10 @@
   - - 210
     - 237
   rgb_file: /set05/V000/visible/I01549.jpg
+/set05/V000/lwir/I01800.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set05/V000/visible/I01800.jpg
 /set05/V000/lwir/I01846.jpg:
   lwir: []
   rgb: []
@@ -3378,6 +4146,22 @@
   lwir: []
   rgb: []
   rgb_file: /set06/V000/visible/I00111.jpg
+/set06/V000/lwir/I00281.jpg:
+  lwir:
+  - - 491
+    - 369
+  - - 620
+    - 320
+  - - 491
+    - 228
+  rgb:
+  - - 489
+    - 371
+  - - 630
+    - 323
+  - - 491
+    - 225
+  rgb_file: /set06/V000/visible/I00281.jpg
 /set06/V000/lwir/I00664.jpg:
   lwir: []
   rgb: []
@@ -3426,6 +4210,18 @@
   - - 35
     - 268
   rgb_file: /set06/V000/visible/I01035.jpg
+/set06/V000/lwir/I01090.jpg:
+  lwir:
+  - - 584
+    - 324
+  - - 606
+    - 322
+  rgb:
+  - - 598
+    - 329
+  - - 620
+    - 328
+  rgb_file: /set06/V000/visible/I01090.jpg
 /set06/V000/lwir/I01205.jpg:
   lwir:
   - - 488
@@ -3466,6 +4262,14 @@
   - - 385
     - 208
   rgb_file: /set06/V000/visible/I01412.jpg
+/set06/V000/lwir/I01491.jpg:
+  lwir:
+  - - 566
+    - 328
+  rgb:
+  - - 564
+    - 326
+  rgb_file: /set06/V000/visible/I01491.jpg
 /set06/V000/lwir/I01518.jpg:
   lwir:
   - - 518
@@ -3498,6 +4302,30 @@
   - - 183
     - 306
   rgb_file: /set06/V000/visible/I01518.jpg
+/set06/V001/lwir/I00058.jpg:
+  lwir:
+  - - 549
+    - 361
+  - - 56
+    - 397
+  - - 99
+    - 402
+  rgb:
+  - - 558
+    - 363
+  - - 21
+    - 428
+  - - 77
+    - 426
+  rgb_file: /set06/V001/visible/I00058.jpg
+/set06/V001/lwir/I00133.jpg:
+  lwir:
+  - - 539
+    - 294
+  rgb:
+  - - 543
+    - 293
+  rgb_file: /set06/V001/visible/I00133.jpg
 /set06/V001/lwir/I00196.jpg:
   lwir:
   - - 34
@@ -3542,10 +4370,34 @@
   lwir: []
   rgb: []
   rgb_file: /set06/V001/visible/I01292.jpg
+/set06/V001/lwir/I01318.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set06/V001/visible/I01318.jpg
 /set06/V001/lwir/I01409.jpg:
   lwir: []
   rgb: []
   rgb_file: /set06/V001/visible/I01409.jpg
+/set06/V001/lwir/I01579.jpg:
+  lwir:
+  - - 190
+    - 260
+  rgb:
+  - - 179
+    - 260
+  rgb_file: /set06/V001/visible/I01579.jpg
+/set06/V001/lwir/I02189.jpg:
+  lwir:
+  - - 600
+    - 70
+  - - 61
+    - 47
+  rgb:
+  - - 596
+    - 66
+  - - 41
+    - 26
+  rgb_file: /set06/V001/visible/I02189.jpg
 /set06/V001/lwir/I02236.jpg:
   lwir: []
   rgb: []
@@ -3590,6 +4442,14 @@
   - - 638
     - 409
   rgb_file: /set06/V001/visible/I02328.jpg
+/set06/V001/lwir/I02342.jpg:
+  lwir:
+  - - 510
+    - 485
+  rgb:
+  - - 540
+    - 498
+  rgb_file: /set06/V001/visible/I02342.jpg
 /set06/V002/lwir/I00180.jpg:
   lwir:
   - - 565
@@ -3698,6 +4558,26 @@
   lwir: []
   rgb: []
   rgb_file: /set06/V002/visible/I01550.jpg
+/set06/V002/lwir/I01572.jpg:
+  lwir:
+  - - 60
+    - 415
+  - - 42
+    - 428
+  - - 418
+    - 230
+  - - 38
+    - 356
+  rgb:
+  - - 25
+    - 452
+  - - 1
+    - 475
+  - - 416
+    - 226
+  - - 4
+    - 382
+  rgb_file: /set06/V002/visible/I01572.jpg
 /set06/V003/lwir/I00083.jpg:
   lwir:
   - - 296
@@ -3838,6 +4718,18 @@
   - - 4
     - 355
   rgb_file: /set06/V003/visible/I00233.jpg
+/set06/V003/lwir/I00259.jpg:
+  lwir:
+  - - 72
+    - 374
+  - - 90
+    - 375
+  rgb:
+  - - 54
+    - 394
+  - - 68
+    - 394
+  rgb_file: /set06/V003/visible/I00259.jpg
 /set06/V003/lwir/I00297.jpg:
   lwir:
   - - 393
@@ -3874,6 +4766,10 @@
   - - 15
     - 64
   rgb_file: /set06/V003/visible/I00668.jpg
+/set06/V003/lwir/I00849.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set06/V003/visible/I00849.jpg
 /set06/V003/lwir/I00883.jpg:
   lwir:
   - - 546
@@ -3998,6 +4894,18 @@
   - - 55
     - 61
   rgb_file: /set06/V003/visible/I01731.jpg
+/set06/V003/lwir/I01810.jpg:
+  lwir:
+  - - 474
+    - 76
+  rgb:
+  - - 475
+    - 76
+  rgb_file: /set06/V003/visible/I01810.jpg
+/set06/V003/lwir/I01848.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set06/V003/visible/I01848.jpg
 /set06/V003/lwir/I02119.jpg:
   lwir:
   - - 149
@@ -4126,6 +5034,30 @@
   - - 285
     - 126
   rgb_file: /set06/V003/visible/I02929.jpg
+/set06/V003/lwir/I02973.jpg:
+  lwir:
+  - - 442
+    - 339
+  - - 481
+    - 296
+  - - 412
+    - 232
+  - - 418
+    - 191
+  - - 433
+    - 192
+  rgb:
+  - - 442
+    - 334
+  - - 482
+    - 290
+  - - 408
+    - 228
+  - - 414
+    - 188
+  - - 428
+    - 188
+  rgb_file: /set06/V003/visible/I02973.jpg
 /set06/V003/lwir/I03079.jpg:
   lwir:
   - - 106
@@ -4246,6 +5178,10 @@
   lwir: []
   rgb: []
   rgb_file: /set06/V003/visible/I03880.jpg
+/set06/V003/lwir/I03990.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set06/V003/visible/I03990.jpg
 /set06/V003/lwir/I04022.jpg:
   lwir:
   - - 355
@@ -4350,6 +5286,18 @@
   - - 485
     - 260
   rgb_file: /set06/V004/visible/I00583.jpg
+/set06/V004/lwir/I00752.jpg:
+  lwir:
+  - - 154
+    - 90
+  - - 538
+    - 326
+  rgb:
+  - - 146
+    - 88
+  - - 536
+    - 327
+  rgb_file: /set06/V004/visible/I00752.jpg
 /set06/V004/lwir/I00761.jpg:
   lwir: []
   rgb: []
@@ -4378,6 +5326,22 @@
   - - 68
     - 336
   rgb_file: /set06/V004/visible/I01087.jpg
+/set06/V004/lwir/I01204.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set06/V004/visible/I01204.jpg
+/set06/V004/lwir/I01379.jpg:
+  lwir:
+  - - 486
+    - 215
+  - - 84
+    - 77
+  rgb:
+  - - 491
+    - 213
+  - - 76
+    - 68
+  rgb_file: /set06/V004/visible/I01379.jpg
 /set06/V004/lwir/I01552.jpg:
   lwir:
   - - 593
@@ -4426,6 +5390,10 @@
   lwir: []
   rgb: []
   rgb_file: /set06/V004/visible/I01992.jpg
+/set06/V004/lwir/I02192.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set06/V004/visible/I02192.jpg
 /set06/V004/lwir/I02684.jpg:
   lwir:
   - - 124
@@ -4434,6 +5402,50 @@
   - - 107
     - 372
   rgb_file: /set06/V004/visible/I02684.jpg
+/set06/V004/lwir/I02699.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set06/V004/visible/I02699.jpg
+/set07/V000/lwir/I00463.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set07/V000/visible/I00463.jpg
+/set07/V000/lwir/I00591.jpg:
+  lwir:
+  - - 594
+    - 237
+  - - 516
+    - 102
+  - - 490
+    - 127
+  - - 591
+    - 72
+  - - 427
+    - 50
+  - - 89
+    - 82
+  - - 122
+    - 136
+  - - 162
+    - 138
+  rgb:
+  - - 611
+    - 238
+  - - 516
+    - 104
+  - - 489
+    - 130
+  - - 600
+    - 73
+  - - 430
+    - 52
+  - - 85
+    - 77
+  - - 122
+    - 138
+  - - 164
+    - 139
+  rgb_file: /set07/V000/visible/I00591.jpg
 /set07/V000/lwir/I00801.jpg:
   lwir:
   - - 112
@@ -4446,6 +5458,74 @@
   - - 109
     - 150
   rgb_file: /set07/V000/visible/I00801.jpg
+/set07/V000/lwir/I01528.jpg:
+  lwir:
+  - - 416
+    - 255
+  - - 424
+    - 257
+  - - 418
+    - 222
+  - - 341
+    - 103
+  - - 426
+    - 133
+  - - 612
+    - 143
+  - - 599
+    - 143
+  rgb:
+  - - 418
+    - 250
+  - - 425
+    - 253
+  - - 420
+    - 220
+  - - 342
+    - 99
+  - - 425
+    - 131
+  - - 618
+    - 140
+  - - 603
+    - 140
+  rgb_file: /set07/V000/visible/I01528.jpg
+/set07/V000/lwir/I01890.jpg:
+  lwir:
+  - - 420
+    - 152
+  - - 190
+    - 74
+  - - 214
+    - 81
+  - - 358
+    - 84
+  - - 567
+    - 52
+  - - 578
+    - 47
+  - - 602
+    - 51
+  - - 566
+    - 156
+  rgb:
+  - - 420
+    - 151
+  - - 191
+    - 73
+  - - 220
+    - 77
+  - - 359
+    - 82
+  - - 574
+    - 47
+  - - 582
+    - 44
+  - - 612
+    - 47
+  - - 572
+    - 154
+  rgb_file: /set07/V000/visible/I01890.jpg
 /set07/V000/lwir/I02006.jpg:
   lwir:
   - - 296
@@ -4494,6 +5574,26 @@
   lwir: []
   rgb: []
   rgb_file: /set07/V001/visible/I00249.jpg
+/set07/V001/lwir/I00479.jpg:
+  lwir:
+  - - 208
+    - 380
+  - - 378
+    - 292
+  - - 222
+    - 290
+  - - 27
+    - 384
+  rgb:
+  - - 208
+    - 386
+  - - 376
+    - 286
+  - - 225
+    - 288
+  - - 4
+    - 413
+  rgb_file: /set07/V001/visible/I00479.jpg
 /set07/V001/lwir/I00628.jpg:
   lwir:
   - - 304
@@ -4570,6 +5670,10 @@
   lwir: []
   rgb: []
   rgb_file: /set07/V001/visible/I01163.jpg
+/set07/V001/lwir/I01183.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set07/V001/visible/I01183.jpg
 /set07/V001/lwir/I01231.jpg:
   lwir: []
   rgb: []
@@ -4662,6 +5766,22 @@
   - - 341
     - 86
   rgb_file: /set07/V001/visible/I01475.jpg
+/set07/V001/lwir/I01563.jpg:
+  lwir:
+  - - 545
+    - 355
+  - - 489
+    - 242
+  - - 624
+    - 222
+  rgb:
+  - - 560
+    - 359
+  - - 488
+    - 239
+  - - 634
+    - 224
+  rgb_file: /set07/V001/visible/I01563.jpg
 /set07/V001/lwir/I01691.jpg:
   lwir:
   - - 308
@@ -4754,6 +5874,14 @@
   - - 76
     - 71
   rgb_file: /set07/V001/visible/I01874.jpg
+/set07/V001/lwir/I01955.jpg:
+  lwir:
+  - - 621
+    - 214
+  rgb:
+  - - 631
+    - 212
+  rgb_file: /set07/V001/visible/I01955.jpg
 /set07/V001/lwir/I01979.jpg:
   lwir:
   - - 578
@@ -4926,6 +6054,26 @@
   - - 199
     - 126
   rgb_file: /set07/V001/visible/I02758.jpg
+/set07/V001/lwir/I02825.jpg:
+  lwir:
+  - - 248
+    - 81
+  - - 23
+    - 30
+  - - 54
+    - 53
+  - - 109
+    - 85
+  rgb:
+  - - 252
+    - 81
+  - - 15
+    - 20
+  - - 50
+    - 47
+  - - 111
+    - 82
+  rgb_file: /set07/V001/visible/I02825.jpg
 /set07/V001/lwir/I02866.jpg:
   lwir:
   - - 239
@@ -5026,6 +6174,14 @@
   lwir: []
   rgb: []
   rgb_file: /set07/V001/visible/I03462.jpg
+/set07/V001/lwir/I03509.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set07/V001/visible/I03509.jpg
+/set07/V001/lwir/I03513.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set07/V001/visible/I03513.jpg
 /set07/V001/lwir/I03592.jpg:
   lwir: []
   rgb: []
@@ -5078,6 +6234,10 @@
   - - 536
     - 219
   rgb_file: /set07/V001/visible/I03942.jpg
+/set07/V002/lwir/I00015.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set07/V002/visible/I00015.jpg
 /set07/V002/lwir/I00073.jpg:
   lwir:
   - - 272
@@ -5162,6 +6322,10 @@
   lwir: []
   rgb: []
   rgb_file: /set07/V002/visible/I00524.jpg
+/set07/V002/lwir/I00824.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set07/V002/visible/I00824.jpg
 /set07/V002/lwir/I00989.jpg:
   lwir:
   - - 249
@@ -5310,6 +6474,18 @@
   - - 367
     - 44
   rgb_file: /set08/V000/visible/I00150.jpg
+/set08/V000/lwir/I00234.jpg:
+  lwir:
+  - - 137
+    - 16
+  - - 129
+    - 33
+  rgb:
+  - - 138
+    - 8
+  - - 131
+    - 25
+  rgb_file: /set08/V000/visible/I00234.jpg
 /set08/V000/lwir/I00301.jpg:
   lwir:
   - - 150
@@ -5322,10 +6498,26 @@
   - - 64
     - 433
   rgb_file: /set08/V000/visible/I00301.jpg
+/set08/V000/lwir/I00313.jpg:
+  lwir:
+  - - 45
+    - 435
+  - - 120
+    - 368
+  rgb:
+  - - 8
+    - 478
+  - - 104
+    - 384
+  rgb_file: /set08/V000/visible/I00313.jpg
 /set08/V000/lwir/I00422.jpg:
   lwir: []
   rgb: []
   rgb_file: /set08/V000/visible/I00422.jpg
+/set08/V000/lwir/I00696.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set08/V000/visible/I00696.jpg
 /set08/V000/lwir/I00815.jpg:
   lwir:
   - - 136
@@ -6066,6 +7258,22 @@
   - - 43
     - 215
   rgb_file: /set08/V001/visible/I01070.jpg
+/set08/V001/lwir/I01330.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set08/V001/visible/I01330.jpg
+/set08/V001/lwir/I01438.jpg:
+  lwir:
+  - - 276
+    - 118
+  - - 256
+    - 110
+  rgb:
+  - - 278
+    - 118
+  - - 260
+    - 110
+  rgb_file: /set08/V001/visible/I01438.jpg
 /set08/V001/lwir/I01449.jpg:
   lwir:
   - - 235
@@ -6094,6 +7302,26 @@
   - - 568
     - 360
   rgb_file: /set08/V001/visible/I01457.jpg
+/set08/V001/lwir/I01477.jpg:
+  lwir:
+  - - 537
+    - 357
+  - - 561
+    - 358
+  - - 482
+    - 272
+  - - 458
+    - 272
+  rgb:
+  - - 548
+    - 359
+  - - 576
+    - 361
+  - - 481
+    - 268
+  - - 458
+    - 266
+  rgb_file: /set08/V001/visible/I01477.jpg
 /set08/V001/lwir/I01593.jpg:
   lwir:
   - - 228
@@ -6274,6 +7502,38 @@
   lwir: []
   rgb: []
   rgb_file: /set08/V002/visible/I00248.jpg
+/set08/V002/lwir/I00272.jpg:
+  lwir:
+  - - 106
+    - 264
+  - - 123
+    - 267
+  - - 132
+    - 262
+  - - 589
+    - 226
+  - - 576
+    - 225
+  - - 612
+    - 235
+  - - 591
+    - 293
+  rgb:
+  - - 102
+    - 264
+  - - 120
+    - 266
+  - - 132
+    - 266
+  - - 589
+    - 222
+  - - 576
+    - 224
+  - - 615
+    - 232
+  - - 595
+    - 291
+  rgb_file: /set08/V002/visible/I00272.jpg
 /set08/V002/lwir/I00366.jpg:
   lwir:
   - - 96
@@ -6442,6 +7702,10 @@
   lwir: []
   rgb: []
   rgb_file: /set08/V002/visible/I01714.jpg
+/set08/V002/lwir/I01740.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set08/V002/visible/I01740.jpg
 /set08/V002/lwir/I01779.jpg:
   lwir:
   - - 519
@@ -6462,6 +7726,14 @@
   - - 485
     - 249
   rgb_file: /set08/V002/visible/I01779.jpg
+/set08/V002/lwir/I01812.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set08/V002/visible/I01812.jpg
+/set08/V002/lwir/I02064.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set08/V002/visible/I02064.jpg
 /set08/V002/lwir/I02223.jpg:
   lwir: []
   rgb: []
@@ -6474,6 +7746,10 @@
   lwir: []
   rgb: []
   rgb_file: /set09/V000/visible/I00005.jpg
+/set09/V000/lwir/I00545.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set09/V000/visible/I00545.jpg
 /set09/V000/lwir/I00666.jpg:
   lwir: []
   rgb: []
@@ -6482,10 +7758,18 @@
   lwir: []
   rgb: []
   rgb_file: /set09/V000/visible/I01032.jpg
+/set09/V000/lwir/I01428.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set09/V000/visible/I01428.jpg
 /set09/V000/lwir/I01447.jpg:
   lwir: []
   rgb: []
   rgb_file: /set09/V000/visible/I01447.jpg
+/set09/V000/lwir/I01526.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set09/V000/visible/I01526.jpg
 /set09/V000/lwir/I02003.jpg:
   lwir: []
   rgb: []
@@ -6494,10 +7778,18 @@
   lwir: []
   rgb: []
   rgb_file: /set09/V000/visible/I02115.jpg
+/set09/V000/lwir/I02364.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set09/V000/visible/I02364.jpg
 /set09/V000/lwir/I02559.jpg:
   lwir: []
   rgb: []
   rgb_file: /set09/V000/visible/I02559.jpg
+/set10/V000/lwir/I00109.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set10/V000/visible/I00109.jpg
 /set10/V000/lwir/I00636.jpg:
   lwir: []
   rgb: []
@@ -6534,6 +7826,26 @@
   - - 61
     - 342
   rgb_file: /set10/V000/visible/I02023.jpg
+/set10/V000/lwir/I02146.jpg:
+  lwir:
+  - - 238
+    - 421
+  - - 46
+    - 357
+  - - 258
+    - 299
+  - - 364
+    - 37
+  rgb:
+  - - 239
+    - 427
+  - - 36
+    - 376
+  - - 264
+    - 292
+  - - 371
+    - 42
+  rgb_file: /set10/V000/visible/I02146.jpg
 /set10/V000/lwir/I02820.jpg:
   lwir: []
   rgb: []
@@ -6558,6 +7870,10 @@
   - - 74
     - 378
   rgb_file: /set10/V000/visible/I03160.jpg
+/set10/V000/lwir/I03347.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set10/V000/visible/I03347.jpg
 /set10/V000/lwir/I03491.jpg:
   lwir: []
   rgb: []
@@ -6670,14 +7986,34 @@
   - - 504
     - 218
   rgb_file: /set10/V001/visible/I03034.jpg
+/set10/V001/lwir/I03054.jpg:
+  lwir:
+  - - 587
+    - 250
+  - - 566
+    - 206
+  rgb:
+  - - 594
+    - 250
+  - - 572
+    - 204
+  rgb_file: /set10/V001/visible/I03054.jpg
 /set10/V001/lwir/I03675.jpg:
   lwir: []
   rgb: []
   rgb_file: /set10/V001/visible/I03675.jpg
+/set10/V001/lwir/I03716.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set10/V001/visible/I03716.jpg
 /set10/V001/lwir/I03822.jpg:
   lwir: []
   rgb: []
   rgb_file: /set10/V001/visible/I03822.jpg
+/set10/V001/lwir/I04158.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set10/V001/visible/I04158.jpg
 /set11/V000/lwir/I00426.jpg:
   lwir:
   - - 46
@@ -6722,6 +8058,10 @@
   - - 89
     - 249
   rgb_file: /set11/V000/visible/I01573.jpg
+/set11/V000/lwir/I01656.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set11/V000/visible/I01656.jpg
 /set11/V000/lwir/I01751.jpg:
   lwir:
   - - 59
@@ -6890,6 +8230,10 @@
   lwir: []
   rgb: []
   rgb_file: /set11/V001/visible/I00925.jpg
+/set11/V001/lwir/I01209.jpg:
+  lwir: []
+  rgb: []
+  rgb_file: /set11/V001/visible/I01209.jpg
 /set11/V001/lwir/I01409.jpg:
   lwir: []
   rgb: []

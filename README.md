@@ -26,7 +26,7 @@ In this case we will compute the relative distortion of LWIR image with regards 
     </figure>
 </p>
 
-With any of the `review_image_corresp_*.py` scripts we will match corresponding points between both images. The script goes iteratively over the dataset picking random images (without repetition), so its not very important to have a lot of points in a single image-pair, only those that are a sure match.
+With any of the `review_image_corresp_*.py` scripts we will match corresponding points between both images. The script goes iteratively over the dataset picking random images (without repetition), so its not very important to have a lot of points in a single image-pair, only those that are a sure match. The raw data is stored in a yaml as in `data/he_points.yaml` with all the matching points between images.
 
 Once we have enough points we can apply some filter to them (we have to tackle possible human error in the tagging) an interpolate a grid of distortion vectors between images (a distortion vector has a starting point with the coordinates in LWIR image and an arrow reaching the matching point coordinates in RGB image):
 

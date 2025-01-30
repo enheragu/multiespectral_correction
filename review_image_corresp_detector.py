@@ -20,6 +20,9 @@ detector = cv2.ORB_create()
 DETECTOR_NAME = detector.getDefaultName().lower().split('.')[-1]
 points_file = f"data/{DETECTOR_NAME}_points.yaml"
 
+
+#https://www.mdpi.com/1424-8220/12/9/12661
+
 # Inicializar datos de YAML
 if os.path.exists(points_file):
     with open(points_file, 'r') as f:
@@ -44,7 +47,7 @@ current_points_lwir = []
 current_pair_index = 0
 matches_to_remove = set()
 
-def filter_by_proximity(keypoints_lwir, keypoints_visible, matches, max_distance=70):
+def filter_by_proximity(keypoints_lwir, keypoints_visible, matches, max_distance=50):
     filtered_matches = []
     for match in matches:
         kp1 = keypoints_lwir[match.queryIdx].pt  # Punto en la imagen LWIR
@@ -59,10 +62,22 @@ def filter_by_proximity(keypoints_lwir, keypoints_visible, matches, max_distance
 
 def detect_and_match_features(lwir_image, visible_image):
     global detector, DETECTOR_NAME
+    
+    # Normalize both images
+    lwir_image_norm = cv2.normalize(lwir_image, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
+    visible_image_norm = cv2.normalize(visible_image, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
+
+    # blurred = cv2.GaussianBlur(lwir_image_norm, (3, 3), 0)
+    # laplacian = cv2.Laplacian(blurred, cv2.CV_64F)
+    # lwir_image_laplacian_abs = cv2.convertScaleAbs(laplacian) # No negative values
+
+    # blurred = cv2.GaussianBlur(visible_image_norm, (3, 3), 0)
+    # laplacian = cv2.Laplacian(blurred, cv2.CV_64F)
+    # visible_image_laplacian_abs = cv2.convertScaleAbs(laplacian) # No negative values
 
     # Detectar y describir características
-    keypoints_lwir, descriptors_lwir = detector.detectAndCompute(lwir_image, None)
-    keypoints_visible, descriptors_visible = detector.detectAndCompute(visible_image, None)
+    keypoints_lwir, descriptors_lwir = detector.detectAndCompute(lwir_image_norm, None)
+    keypoints_visible, descriptors_visible = detector.detectAndCompute(visible_image_norm, None)
 
     # Emparejar características con un matcher basado en Hamming
     if DETECTOR_NAME == "orb":
@@ -149,7 +164,8 @@ while current_pair_index < len(pairs):
     lwir_image = cv2.resize(lwir_image, (visible_image.shape[1], visible_image.shape[0]))
 
     # Detectar y emparejar características
-    keypoints_lwir, keypoints_visible, matches = detect_and_match_features(lwir_image, visible_image)
+    r,g,b = cv2.split(visible_image)
+    keypoints_lwir, keypoints_visible, matches = detect_and_match_features(lwir_image, b)
 
     while True:
         result_image = draw_matches_with_numbers(lwir_image, visible_image, keypoints_lwir, keypoints_visible, matches)

@@ -12,6 +12,9 @@ from utils.find_images import find_image_pairs
 # Ruta base de las imágenes
 base_path = "../rgbt-ped-detection/kaist_dataset_images/kaist-cvpr15/images"
 
+# Factor de escala para mostrar imágenes más grandes
+scale_factor = 1.5
+
 os.makedirs('data', exist_ok=True)
 # Archivo YAML para almacenar los puntos
 points_file = "data/he_points.yaml"
@@ -29,6 +32,8 @@ else:
     print(f"[INFO] No se encontró un archivo YAML previo. Se creará uno nuevo.")
 
 
+def resize_for_display(image, scale):
+    return cv2.resize(image, (int(image.shape[1] * scale), int(image.shape[0] * scale)))
 
 # Encontrar pares
 pairs = find_image_pairs(base_path)
@@ -42,14 +47,18 @@ current_pair_index = 0
 # Función de callback para capturar puntos en RGB
 def select_points_rgb(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
-        current_points_rgb.append((x, y))
-        print(f"[INFO] Punto RGB añadido: {x}, {y}")
+        original_x = int(x / scale_factor)
+        original_y = int(y / scale_factor)
+        current_points_rgb.append((original_x, original_y))
+        print(f"[INFO] Punto RGB añadido: {current_points_rgb[-1]}")
 
 # Función de callback para capturar puntos en LWIR
 def select_points_lwir(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
-        current_points_lwir.append((x, y))
-        print(f"[INFO] Punto LWIR añadido: {x}, {y}")
+        original_x = int(x / scale_factor)
+        original_y = int(y / scale_factor)
+        current_points_lwir.append((original_x, original_y))
+        print(f"[INFO] Punto LWIR añadido: {current_points_lwir[-1]}")
 
 # Guardar puntos en YAML
 # Guardar puntos en YAML
@@ -58,6 +67,7 @@ def save_points(lwir_file, visible_file):
 
     if len(current_points_rgb) != len(current_points_lwir):
         print("[ERROR] El número de puntos RGB y LWIR no coincide. Completa antes de continuar.")
+        print(f"{len(current_points_rgb) = }; {len(current_points_lwir) = }")
         return False
 
     # Convertir las tuplas a listas para YAML
@@ -102,11 +112,15 @@ while current_pair_index < len(pairs):
         continue
 
     lwir_image = cv2.resize(lwir_image, (visible_image.shape[1], visible_image.shape[0]))  # Ajustar tamaños
+    
+    # Redimensionar imágenes para visualización
+    visible_display = resize_for_display(visible_image, scale_factor)
+    lwir_display = resize_for_display(lwir_image, scale_factor)
 
     while True:
         # Mostrar ambas imágenes
-        cv2.imshow('RGB', visible_image)
-        cv2.imshow('LWIR', lwir_image)
+        cv2.imshow('RGB', visible_display)
+        cv2.imshow('LWIR', lwir_display)
 
         key = cv2.waitKey(1)
 
