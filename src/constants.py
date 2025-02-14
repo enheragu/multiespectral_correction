@@ -1,0 +1,4 @@
+
+
+output_data_path = 'data'
+dataset_images_path = "../kaist-cvpr15/images/"
