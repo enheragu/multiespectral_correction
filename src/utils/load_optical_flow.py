@@ -3,8 +3,10 @@
 from pathlib import Path
 from utils.pickle_utils import load_pkl
 
+from constants import output_data_path
+
 optical_flow_cache = {}
-def load_optical_flow(rgb_file_path, optical_flow_data_path = '/home/arvc/eeha/multiespectral_correction/data'):
+def load_optical_flow(rgb_file_path, optical_flow_data_path = output_data_path):
     global optical_flow_cache
 
     set_name = Path(rgb_file_path).parts[1]
@@ -18,3 +20,4 @@ def load_optical_flow(rgb_file_path, optical_flow_data_path = '/home/arvc/eeha/m
     except StopIteration as e:
         print(f"Could not get {rgb_file_path} item in current dictionary from {set_name}/{sequence_name} cache. Current available items are: {[item['visible'] for item in optical_flow_list]}")
     return flow_data
+

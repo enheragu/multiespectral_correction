@@ -8,7 +8,8 @@ This set of scripts is intended to check and correct mialignments and distortion
 - [ ] `00_review_image_corresp_handeye.py`: This tool lets you match manually corresponding pairs of points between images (one LWIR and its corresponding RGB image).
 - [ ] `01_computeImageMovement.py`: Making use of optical flow computes the transform between contiguous RGB images. 
 - [ ] `02_computeMultiespectralDistortionFactor.py`: The transform between LWIR and RGB images should be some function of the transform between contiguous RGB images. This computes that factor along with other useful data.
-- [ ] `03_project_images.py`: Small script to debug the correction projecting images over its corrected/non-corrected pairs.
+- [ ] `03_computeTransform.py`: Computes transform for each image in the dataset. 
+- [ ] `04_projectImages.py`: Small script to debug the correction projecting images over its corrected/non-corrected pairs.
 
 ## Toolchain
 
