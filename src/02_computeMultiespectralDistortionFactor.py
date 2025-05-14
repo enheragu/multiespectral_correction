@@ -14,7 +14,7 @@ from constants import output_data_path
 
 
 def filterOutliers(data, m=1.0):
-    """ Filtra valores que se desvían más de `m` desviaciones estándar. """
+    """ Filter values that are more deviated than m std from average. """
     data = np.asarray(data, dtype=np.float64)
     if data.size == 0:
         return data

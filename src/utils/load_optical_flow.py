@@ -1,12 +1,13 @@
 
 
+import os
 from pathlib import Path
 from utils.pickle_utils import load_pkl
 
 from constants import output_data_path
 
 optical_flow_cache = {}
-def load_optical_flow(rgb_file_path, optical_flow_data_path = output_data_path):
+def load_optical_flow(rgb_file_path, optical_flow_data_path =os.path.join(output_data_path,'optical_flow')):
     global optical_flow_cache
 
     set_name = Path(rgb_file_path).parts[1]

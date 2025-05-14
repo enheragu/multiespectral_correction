@@ -33,8 +33,52 @@ from constants import output_data_path
 # · Set 10 - Night / Road / 3.75GB / 8,902 frames / 4,987 objects
 # · Set 11 - Night / Downtown / 1.33GB / 3,560 frames / 6,655 objects
 
-day_sets = ('set00','set01','set02','set06','set07','set08')
-night_sets = ('set03','set04','set05','set09','set10','set11')
+# sets_scale_factor = {'set00': 2.5,'set01': 5,'set02': 5,'set06': 5,'set07': 5,'set08': 5, # dat
+#           'set03': 1,'set04': 2,'set05': 2,'set09': 2,'set10': 2,'set11': 2} # night
+sets_scale_factor = { # Manually adjusted and reviewed from 02_computeMultiespectralDistortionFactor.py -> very big numbers might appear do to labelled moving parts in the image (coupled car movement+moving object)
+                    'set00/V000': 1.6, # Day sets
+                    'set00/V001': 1.8,
+                    'set00/V002': 3.0,
+                    'set00/V003': 5.0,
+                    'set00/V004': 1.4,
+                    'set00/V005': 1.8,
+                    'set00/V006': 1.9,
+                    'set00/V007': 1.7,
+                    'set00/V008': 1.7,
+                    'set01/V000': 4,
+                    'set01/V001': 4.9,
+                    'set01/V002': 2.0,
+                    'set01/V003': 1.1,
+                    'set01/V004': 3,
+                    'set01/V005': 3,
+                    'set02/V000': 3.6,
+                    'set02/V001': 2.8,
+                    'set02/V002': 3,
+                    'set02/V003': 2.7,
+                    'set02/V004': 2.2, 
+                    'set03/V000': 2.2, # Night sets
+                    'set03/V001': 2.8,
+                    'set04/V000': 3,
+                    'set04/V001': 3,
+                    'set05/V000': 3.1,
+                    'set06/V000': 1.2, # Day sets
+                    'set06/V001': 2.0,
+                    'set06/V002': 1.8,
+                    'set06/V003': 2.3,
+                    'set06/V004': 2.1,
+                    'set07/V000': 1.6,
+                    'set07/V001': 3.3,
+                    'set07/V002': 2.9,
+                    'set08/V000': 2.2,
+                    'set08/V001': 3,
+                    'set08/V002': 6.0,
+                    'set09/V000': 3.0, # Night sets
+                    'set10/V000': 2,
+                    'set10/V001': 2,
+                    'set11/V000': 2.5,
+                    'set11/V001': 4.0,
+                    }
+
 
 if __name__ == '__main__':
     pkl_path = f'{output_data_path}/image_pairs.pkl'
@@ -59,21 +103,21 @@ if __name__ == '__main__':
             if not (set_name,sequence_name) in tranform_data:
                 tranform_data[(set_name,sequence_name)] = {}
 
-            visible2visible_transform = np.array(visible_flow['oflow_visible']['transformation_matrix'])
-            visible2lwir_transform = scaleAffineTransform(invertAffineTransform(visible2visible_transform),5)
-           
-            if set_name in day_sets:
-                lwir2visible_transform = invertAffineTransform(visible2lwir_transform)
-                tranform_data[(set_name,sequence_name)][lwir_image] = lwir2visible_transform
-            elif set_name in night_sets:
-                tranform_data[(set_name,sequence_name)][rgb_image] = visible2lwir_transform
-            else:
-                tqdm.write(f"[ERROR] {set_name} does not corresponds to any set for day/night conditions")    
+            visible2visible_transform = np.array(visible_flow['oflow_visible']['transformation_matrix'])           
+            # if set_name in list(day_sets_t.keys()):
+            visible2lwir_transform = scaleAffineTransform(invertAffineTransform(visible2visible_transform), sets_scale_factor[f"{set_name}/{sequence_name}"])
+            lwir2visible_transform = invertAffineTransform(visible2lwir_transform)
+            tranform_data[(set_name,sequence_name)][lwir_image] = lwir2visible_transform
+            # elif set_name in list(night_sets_t.keys()):
+            #     visible2lwir_transform = scaleAffineTransform(invertAffineTransform(visible2visible_transform),night_sets_t[set_name]/2)
+            #     lwir2visible_transform = invertAffineTransform(visible2lwir_transform)
+            #     tranform_data[(set_name,sequence_name)][rgb_image] = visible2lwir_transform
+            #     tranform_data[(set_name,sequence_name)][lwir_image] = lwir2visible_transform
 
             pbar.update(1)
     
     for key, items in tranform_data.items():
-        output_pkl = f'{output_data_path}/transform_{key[0]}_{key[1]}.pkl'
+        output_pkl = f'{output_data_path}/transform/transform_{key[0]}_{key[1]}.pkl'
         tqdm.write(f"Saving results to {output_pkl}")
         save_pkl(items, output_pkl)
 

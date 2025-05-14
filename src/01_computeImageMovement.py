@@ -162,14 +162,14 @@ def calculate_optical_flow(prev_frame, curr_frame, next_frame=None, debug=False,
         avg_movement = np.mean(np.sqrt(np.sum(flow**2, axis=1)))
 
         if debug:
-            global current_visible_image, current_corrected_visible_image, prev_visible_image
+            global current_image_debug, current_corrected_image_debug, prev_image_debug
             flow_img = draw_flow(curr_gray, good_prev, good_curr) # Exagera el flujo visualmente
             cv2.imshow(f'Filtered Optical Flow {image_tag}', flow_img)
 
-            current_visible_image = curr_frame.copy()
+            current_image_debug = curr_frame.copy()
             h, w = curr_frame.shape[:2]
-            current_corrected_visible_image = cv2.warpAffine(curr_frame.copy(), transformation_matrix, (w, h))
-            prev_visible_image = prev_frame.copy()
+            current_corrected_image_debug = cv2.warpAffine(curr_frame.copy(), transformation_matrix, (w, h))
+            prev_image_debug = prev_frame.copy()
             update_overlay()
 
             while True:
@@ -193,75 +193,79 @@ def process_sequence(args):
     results = []    
     tqdm.write(f"Process images from: {set_name = }; {sequence_name = };")
     
-    prev_frame_visible_name = None
-    curr_frame_visible_name = None
-    prev_frame_visible = None
-    curr_frame_visible = None
+    prev_frame_name = {'visible': None, 'lwir': None}
+    curr_frame_name = {'visible': None, 'lwir': None}
+    prev_frame = {'visible': None, 'lwir': None}
+    curr_frame = {'visible': None, 'lwir': None}
     
-    for i, (lwir_path, visible_path) in enumerate(tqdm(pairs, desc="Processing frames", position=index+1)):
-        next_frame_visible_name = f"{dataset_images_path}/{visible_path}"        
-        next_frame_visible = cv2.imread(str(next_frame_visible_name))
+    for i, (lwir_path, visible_path) in enumerate(tqdm(pairs, desc=f"{set_name}/{sequence_name}", position=index+1)):
+        next_frame_name = {'visible': f"{dataset_images_path}/{visible_path}", 
+                           'lwir': f"{dataset_images_path}/{lwir_path}"}
+        next_frame = {'visible': cv2.imread(str(next_frame_name['visible'])), 
+                      'lwir': cv2.imread(str(next_frame_name['lwir']))}
         
-        if prev_frame_visible is not None and curr_frame_visible is not None:
-            params_visible = calculate_optical_flow(prev_frame_visible, curr_frame_visible, next_frame_visible, debug=debug)
-            results.append({
-                'lwir': lwir_path,
-                'visible': visible_path,
-                'oflow_visible': params_visible.to_dict(),
-            })
+        if prev_frame['visible'] is not None and curr_frame['visible'] is not None:
+            params_visible = calculate_optical_flow(prev_frame['visible'], curr_frame['visible'], next_frame['visible'], debug=debug)
+            params_lwir = calculate_optical_flow(prev_frame['lwir'], curr_frame['lwir'], next_frame['lwir'], debug=debug)
+            results.append({'lwir': lwir_path,
+                            'visible': visible_path,
+                            'oflow_visible': params_visible.to_dict(),
+                            'oflow_lwir': params_lwir.to_dict()
+                            })
             if debug:
-                tqdm.write(f"Evaluating frames:\n\t· {prev_frame_visible_name = }\n\t· {curr_frame_visible_name = }\n\t· {next_frame_visible_name = }")
+                tqdm.write(f"Evaluating frames:\n\t· {prev_frame_name['visible'] = }\n\t· {curr_frame_name['visible'] = }\n\t· {next_frame_name['visible'] = }")
                 tqdm.write(f"Params computed: {params_visible.to_dict()}")
             
         else:
-            results.append({
-                'lwir': lwir_path,
-                'visible': visible_path,
-                'oflow_visible': None,
-            })
-        prev_frame_visible = curr_frame_visible
-        curr_frame_visible = next_frame_visible
-        prev_frame_visible_name = curr_frame_visible_name
-        curr_frame_visible_name = next_frame_visible_name
+            results.append({'lwir': lwir_path,
+                            'visible': visible_path,
+                            'oflow_visible': None,
+                            'oflow_lwir': None
+                            })
+        prev_frame = curr_frame
+        curr_frame = next_frame
+        prev_frame_name = curr_frame_name
+        curr_frame_name = next_frame_name
     
     # Process last frame
-    if len(pairs) > 1 and prev_frame_visible is not None and curr_frame_visible is not None:
-        params_visible = calculate_optical_flow(prev_frame_visible, curr_frame_visible, None, debug=debug)
-        results.append({
-            'lwir': pairs[-1][0],
-            'visible': pairs[-1][1],
-            'oflow_visible': params_visible.to_dict(),
-        })
+    if len(pairs) > 1 and prev_frame['visible'] is not None and curr_frame['visible'] is not None:
+        params_visible = calculate_optical_flow(prev_frame['visible'], curr_frame['visible'], None, debug=debug)
+        params_lwir = calculate_optical_flow(prev_frame['lwir'], curr_frame['lwir'], None, debug=debug)
+        results.append({'lwir': pairs[-1][0],
+                        'visible': pairs[-1][1],
+                        'oflow_visible': params_visible.to_dict(),
+                        'oflow_lwir': params_lwir.to_dict()
+                        })
     
-    output_pkl = f'{output_data_path}/optical_flow_{set_name}_{sequence_name}.pkl'
+    output_pkl = f'{output_data_path}/optical_flow/optical_flow_{set_name}_{sequence_name}.pkl'
     tqdm.write(f"Saving results to {output_pkl}")
     save_pkl(results, output_pkl)
     return results, len(pairs)
 
 
-current_visible_image = np.zeros((640, 512, 3))
-current_corrected_visible_image = np.zeros((640, 512, 3))
-prev_visible_image = np.zeros((640, 512, 3))
+current_image_debug = np.zeros((640, 512, 3))
+current_corrected_image_debug = np.zeros((640, 512, 3))
+prev_image_debug = np.zeros((640, 512, 3))
 alpha = 0.5
 def update_overlay():
     global alpha
-    if current_visible_image is None or current_corrected_visible_image is None or prev_visible_image is None:
+    if current_image_debug is None or current_corrected_image_debug is None or prev_image_debug is None:
         tqdm.write("[Error] [update_overlay] One or more images are not loaded.")
         return
     
-    overlay = cv2.addWeighted(prev_visible_image, 1 - alpha, current_visible_image, alpha, 0)
-    cv2.imshow('Prev Visible + Current Visible', overlay)
+    overlay = cv2.addWeighted(prev_image_debug, 1 - alpha, current_image_debug, alpha, 0)
+    cv2.imshow(f'Prev {debug_spectr} + Current {debug_spectr}', overlay)
 
-    overlay_corrected = cv2.addWeighted(prev_visible_image, 1 - alpha, current_corrected_visible_image, alpha, 0)
-    cv2.imshow('Prev Visible + Current Projected Corrected', overlay_corrected)
+    overlay_corrected = cv2.addWeighted(prev_image_debug, 1 - alpha, current_corrected_image_debug, alpha, 0)
+    cv2.imshow(f'Prev {debug_spectr} + Current Projected Corrected', overlay_corrected)
 
-    def getDiff(prev_image, curr_image):
-        if prev_image.dtype != np.uint8:
-            prev_image = (prev_image * 255).astype(np.uint8)
+    def getDiff(prev_image_debug, curr_image):
+        if prev_image_debug.dtype != np.uint8:
+            prev_image_debug = (prev_image_debug * 255).astype(np.uint8)
         if curr_image.dtype != np.uint8:
             curr_image = (curr_image * 255).astype(np.uint8)
 
-        diff = cv2.absdiff(prev_image, curr_image)
+        diff = cv2.absdiff(prev_image_debug, curr_image)
         if len(diff.shape) == 3:
             diff = cv2.cvtColor(diff, cv2.COLOR_BGR2GRAY)
     
@@ -290,8 +294,8 @@ def update_overlay():
 
         return correction_factor
 
-    diff_original = getDiff(prev_visible_image, current_visible_image)
-    diff_corrected = getDiff(prev_visible_image, current_corrected_visible_image)
+    diff_original = getDiff(prev_image_debug, current_image_debug)
+    diff_corrected = getDiff(prev_image_debug, current_corrected_image_debug)
 
     cv2.imshow('Diff original', diff_original)
     cv2.imshow('Diff corrected', diff_corrected)
@@ -303,20 +307,21 @@ def on_trackbar(val):
     global alpha
     alpha = val / 100
     update_overlay()
-    cv2.setTrackbarPos('Transparency', 'Prev Visible + Current Visible', val)
-    cv2.setTrackbarPos('Transparency', 'Prev Visible + Current Projected Corrected', val)
+    cv2.setTrackbarPos(f'Transparency', f'Prev {debug_spectr} + Current {debug_spectr}', val)
+    cv2.setTrackbarPos(f'Transparency', f'Prev {debug_spectr} + Current Projected Corrected', val)
 
 
+debug_spectr = 'lwir'
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Process images and calculate optical flow.')
     parser.add_argument('--debug', default=False, action='store_true', help='Enable debug mode to show optical flow visualization')
     args = parser.parse_args()
 
     if args.debug:
-        cv2.namedWindow('Prev Visible + Current Visible')
-        cv2.namedWindow('Prev Visible + Current Projected Corrected')
-        cv2.createTrackbar('Transparency', 'Prev Visible + Current Visible', 50, 100, on_trackbar)
-        cv2.createTrackbar('Transparency', 'Prev Visible + Current Projected Corrected', 50, 100, on_trackbar)
+        cv2.namedWindow(f'Prev {debug_spectr} + Current {debug_spectr}')
+        cv2.namedWindow(f'Prev {debug_spectr} + Current Projected Corrected')
+        cv2.createTrackbar(f'Transparency', f'Prev {debug_spectr} + Current {debug_spectr}', 50, 100, on_trackbar)
+        cv2.createTrackbar(f'Transparency', f'Prev {debug_spectr} + Current Projected Corrected', 50, 100, on_trackbar)
         update_overlay()
 
     pkl_path = f'{output_data_path}/image_pairs.pkl'
@@ -343,8 +348,9 @@ if __name__ == '__main__':
         for index, seq_data in enumerate(sequences_to_process):
             process_sequence((seq_data, index, args.debug)) 
     else:
+        max_workers = 8 # multiprocessing.cpu_count()
         with tqdm(total=total_pairs, desc="Overall Progress", position=0) as pbar:
-            with ProcessPoolExecutor(max_workers=multiprocessing.cpu_count()) as executor:
+            with ProcessPoolExecutor(max_workers=max_workers) as executor:
                 futures = [executor.submit(process_sequence, (seq_data, index, args.debug)) for index, seq_data in enumerate(sequences_to_process)]
                 
                 for future in as_completed(futures):
